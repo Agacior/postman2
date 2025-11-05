@@ -32,7 +32,7 @@ jobs:
         run: |
           newman run warsztaty.json \
           -e env.json \
-          -env-var "admin=${{ secrets.POSTMAN_USERNAME }}" \
+          --env-var "admin=${{ secrets.POSTMAN_USERNAME }}" \
           --env-var "password=${{ secrets.POSTMAN_PASSWORD }}" \
             --reporters cli,htmlextra \
             --reporter-htmlextra-export reports/results.html
